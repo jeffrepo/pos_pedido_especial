@@ -1,0 +1,19 @@
+.pos .pos-receipt-container-ticket {
+  font-size: 0.75em;
+  text-align: center;
+  direction: ltr;
+}
+
+.pos .pos-receipt-container-ticket > div {
+  text-align: left;
+  width: 300px;
+  background-color: white;
+  margin: 20px;
+  padding: 15px;
+  font-size: 16px;
+  padding-bottom:30px;
+  display: inline-block;
+  border: solid 1px rgb(220,220,220);
+  border-radius: 3px;
+  overflow: hidden;
+}

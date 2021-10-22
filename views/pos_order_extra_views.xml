@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="pedido_pos_order_view_form_pos_order" model="ir.ui.view">
+        <field name="name">pedido.pos.order.view.form.pos.order</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+          <field name="picking_id" position="after">
+            <!-- <field name="pedido_especial"/> -->
+            <field name="fecha_especial"/>
+            <field name="hora_especial"/>
+            <field name="observaciones_especial"/>
+            <field name="sucursal_entrega"/>
+            <field name="autorizo_especial"/>
+          </field>
+        </field>
+    </record>
+</odoo>

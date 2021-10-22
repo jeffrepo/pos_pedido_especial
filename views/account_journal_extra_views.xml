@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record id="pedido_account_journal_view_form_pos_order" model="ir.ui.view">
+      <field name="name">pedido.account.journal.view.form.account.journal</field>
+      <field name="model">account.journal</field>
+      <field name="inherit_id" ref="account.view_account_journal_form"/>
+      <field name="arch" type="xml">
+        <field name="type" position="after">
+          <field name="direccion"/>
+        </field>
+      </field>
+  </record>
+</odoo>

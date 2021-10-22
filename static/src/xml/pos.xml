@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="PedidoEspecial">
+        <t t-if="widget.pos.get_order() &amp;&amp; !widget.pos.get_order().pedido_especial">
+          <div class="control-button js_promocionesEspeciales">
+            <i class='fa fa-shopping-bag'/> Pedido especial
+          </div>
+        </t>
+        <t t-if="widget.pos.get_order() &amp;&amp; widget.pos.get_order().pedido_especial">
+          <div style="color:red" class='control-button js_promocionesEspeciales'>
+            <i class='fa fa-shopping-bag'/> Pedido especial seleccionado
+          </div>
+        </t>
+    </t>
+
+    <t t-name="SelectionCuotaPopupWidget">
+        <div role="dialog" class="modal-dialog">
+            <div class="popup popup-selection">
+                <header class="title"><t t-esc=" widget.options.title || 'Select' " /></header>
+                <div class='selection scrollable-y touch-scrollable'>
+                    <table id="CuotasTabla" style="width:100%">
+                      <tr>
+                        <td></td>
+                      </tr>
+                      <tr style="height:70px">
+                        <td><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]></td>
+                        <td align="left">
+                          Fecha de entrega:
+                        </td>
+                        <td colspan="3" align="left">
+                          <input
+                            required="1"
+                            type="date"
+                            id="meeting-time"
+                            name="meeting-time"
+                            style="font-size:80%; width:90%;"/>
+
+                          <!-- <t t-esc="order.get_fecha_hora(meeting-time)"/> -->
+                          <!-- <t t-if="order">
+                            <t t-esc="order.get_fecha_hora(meeting-time)"/>
+                          </t> -->
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr style="height:70px">
+                        <td><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]]></td>
+                        <td align="left">
+                          Hora de entrega:
+                        </td>
+                        <td colspan="3" align="left">
+                          <input
+                            required="1"
+                            type="time"
+                            id="field_time"
+                            name="field_time"
+                            style="font-size:80%; width:90%;"
+                            />
+                          <!-- </input> -->
+                          <!-- <t t-esc="order.get_fecha_hora(meeting-time)"/> -->
+                          <!-- <t t-if="order">
+                            <t t-esc="order.get_fecha_hora(meeting-time)"/>
+                          </t> -->
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                      </tr>
+
+                      <tr rowspan="6" style="height:100px; Word-break:break-all;">
+                        <td></td>
+                        <td align="left">Observaciones: </td>
+                        <td align="left"><textarea id="observaciones_id" required="True" style="font-size:80%; width:90%; height:130px; Word-break:break-all;"></textarea></td>
+                        <td></td>
+                      </tr>
+
+                      <tr>
+                        <td></td>
+                      </tr>
+                      <!-- required = "true" o required = true -->
+
+                      <tr style="height:70px;">
+                        <td></td>
+                        <td align="left">Sucursal de entrega: </td>
+                        <td align="left"><input id="entrega_id" style="font-size:80%; width:90%;"></input></td>
+                        <td></td>
+                      </tr>
+
+                      <tr style="height:70px;">
+                        <td></td>
+                        <td align="left">Autorizó: </td>
+                        <td align="left"><input required="required" id="autorizo_id" style="font-size:80%; width:90%;"></input></td>
+                        <td></td>
+                      </tr>
+                    </table>
+                </div>
+                <footer class="footer">
+                    <div class="button confirm">
+                        Ok
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </t>
+
+
+</templates>
