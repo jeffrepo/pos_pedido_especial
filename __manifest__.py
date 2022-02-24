@@ -26,4 +26,5 @@
         'static/src/xml/pos.xml',
         'static/src/xml/pos_ticket_pedido_especial.xml'
     ],
+    'license': 'LGPL-3',
 }
